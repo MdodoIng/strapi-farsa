@@ -23,7 +23,10 @@ const MainProducts = ({ data }: any) => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-full">\</div>
+            <div className="w-full text-[#301D13] text-lg flex flex-col justify-between h-full py-6 px-10">
+              <p>{item.foodName}</p>
+              <p className="text-brown">₹ {item.rate}</p>
+            </div>
           </div>
         )
       )}
