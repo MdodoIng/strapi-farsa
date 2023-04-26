@@ -12,8 +12,8 @@ function page() {
       <Image
         src={head_texture}
         alt="texture"
-        width={head_texture.width / 2}
-        height={head_texture.height / 2}
+        width={1000}
+        height={300}
         loading="lazy"
         className="fixed top-0 left-0 w-full sm:max-h-[300px] min-[300px]:max-h-[250px] max-h-[200px] object-cover object-[0_25%] -z-10"
       />
