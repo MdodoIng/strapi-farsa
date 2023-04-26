@@ -6,7 +6,7 @@ const MainProducts = ({ data }: any) => {
     <div className="mt-10 grid gap-5">
       {data.map(
         (
-          item: { picture: { src: string }; foodName: string; rate: number },
+          item: { picture: string; foodName: string; rate: number },
           idx: React.Key
         ) => (
           <div
@@ -15,7 +15,7 @@ const MainProducts = ({ data }: any) => {
           >
             <div className="w-[30%] shrink-0 h-full overflow-hidden">
               <Image
-                src={item.picture.src}
+                src={item.picture}
                 alt={`${item.foodName} picture`}
                 width={100}
                 height={100}

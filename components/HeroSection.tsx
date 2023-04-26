@@ -14,7 +14,7 @@ const HeroSection = ({ data }: any) => {
             item: {
               foodName: string;
               rate: number;
-              picture: { src: string };
+              picture: string;
             },
             i: React.Key
           ) => {
@@ -28,9 +28,9 @@ const HeroSection = ({ data }: any) => {
                 key={i}
               >
                 <Image
-                  src={item.picture.src}
+                  src={item.picture}
                   fill
-                  alt={`${item.foodName} image`} 
+                  alt={`${item.foodName} image`}
                   loading="lazy"
                   className="w-full h-full object-cover absolute inset-0 -z-10 "
                 />
