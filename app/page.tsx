@@ -46,9 +46,12 @@ export default function Home() {
       <Image
         src={head_texture}
         alt="texture"
-        fill
-        loading="eager"
-        className="fixed top-0 w-full max-h-[300px] object-cover object-[0_25%] -z-10"
+        width={1000}
+        height={300}
+        loading="lazy"
+        className={`fixed top-0 w-full left-0  object-cover object-[0_25%] -z-10 ${
+          isSelectedCategory ? "max-h-[180px] min-[450px]:max-h-[250px]" : "max-h-[300px]"
+        }`}
       />
       <div className="max-w-2xl mx-auto ">
         <HeroSection data={data} isSelectedCategory={isSelectedCategory} />
