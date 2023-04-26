@@ -30,7 +30,7 @@ const HeroSection = ({ data }: any) => {
                 <Image
                   src={item.picture.src}
                   fill
-                  alt={`${item.foodName} image`}
+                  alt={`${item.foodName} image`} 
                   loading="lazy"
                   className="w-full h-full object-cover absolute inset-0 -z-10 "
                 />
