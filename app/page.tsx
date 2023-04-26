@@ -2,7 +2,7 @@ import HeroSection from "components/HeroSection";
 import MainProducts from "components/MainProducts";
 import BreadCrumbs from "ui/BreadCrumbs";
 
-import dummi from "@/images/chiken beriyani.webp";
+import dummi from "assets/images/chiken beriyani.webp";
 
 export default function Home() {
   const breadCrumbs = ["Rice", "Smoothie", "Soup", "Salad", "Noodles"];
