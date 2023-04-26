@@ -12,27 +12,27 @@ const Header = () => {
 
   return (
     <header
-      className="main_padding w-full  fixed top-11"
+      className="main_padding w-full sm:mt-11 mt-5"
       style={{
         zIndex: 9999,
       }}
     >
       <div className=" max-w-2xl mx-auto flex items-center justify-between ">
         <div className={`${!isToggle && "hidden w-0"} sm:hidden w-[50px] duration-300 ease-in`} />
-        <div>
+        <div className={`${!isToggle && "pl-4"}`}>
           <Link href="/">
             <Image
               src={logo}
               height={50}
               loading="lazy"
               alt="icon"
-              className="object-contain h-16 w-16"
+              className="object-contain h-[70px] w-auto"
             />
           </Link>
         </div>
         <div onClick={() => setIsToggle(!isToggle)} className="cursor-pointer">
           <svg
-            className="h-5 w-auto flex items-center justify-center"
+            className="h-5 w-auto flex items-center justify-center pr-4"
             viewBox="0 0 31 22"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

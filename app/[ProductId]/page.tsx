@@ -2,9 +2,18 @@ import React from "react";
 import dummi from "public/images/chiken beriyani.webp";
 import Image from "next/image";
 
+import head_texture from "public/textures/head texture.webp";
+
 function page() {
   return (
-    <div className="min-h-screen main_padding w-full sm:mt-52 mt-40 mb-20">
+    <div className="min-h-screen main_padding w-full sm:mt-20 mt-10 mb-14">
+      <Image
+        src={head_texture}
+        alt="texture"
+        fill
+        loading="eager"
+        className="fixed top-0 w-full sm:max-h-[300px] min-[300px]:max-h-[250px] max-h-[200px] object-cover object-[0_25%] -z-10"
+      />
       <div className="max-w-2xl mx-auto flex flex-col items-start justify-center">
         <div className="sm:aspect-video aspect-[1/.8] overflow-hidden w-full rounded-[10px]">
           <Image
@@ -29,6 +38,12 @@ function page() {
             The texture of the smoothie is typically thick and creamy, and the
             flavor is sweet and tropical, with a distinct mango taste.
           </p>
+        </div>
+
+        <div className="flex items-center justify-center w-full">
+          <button className="mt-7 px-4 py-3 pb-4 border border-black rounded-[20px] text-brown text-lg flex items-center justify-center max-sm:w-full cursor-pointer">
+            Go back to Smootie
+          </button>
         </div>
       </div>
     </div>

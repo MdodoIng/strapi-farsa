@@ -6,6 +6,9 @@ import BreadCrumbs from "ui/BreadCrumbs";
 
 import dummi from "public/images/chiken beriyani.webp";
 import { useStatesContext } from "context/context";
+import Image from "next/image";
+
+import head_texture from "public/textures/head texture.webp";
 
 const breadCrumbs = [
   "Rice",
@@ -39,7 +42,14 @@ export default function Home() {
   const { isSelectedCategory } = useStatesContext();
 
   return (
-    <main className="main_padding min-h-screen w-full sm:mt-52 mt-40 mb-20">
+    <main className="main_padding min-h-screen w-full sm:mt-20 mt-10 mb-14">
+      <Image
+        src={head_texture}
+        alt="texture"
+        fill
+        loading="eager"
+        className="fixed top-0 w-full max-h-[300px] object-cover object-[0_25%] -z-10"
+      />
       <div className="max-w-2xl mx-auto ">
         <HeroSection data={data} isSelectedCategory={isSelectedCategory} />
         <BreadCrumbs

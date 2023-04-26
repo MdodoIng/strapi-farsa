@@ -33,7 +33,7 @@ const HeroSection = ({ data, isSelectedCategory }: any) => {
                     loading="lazy"
                     className="w-full h-full object-cover absolute inset-0 -z-10 "
                   />
-                  <div className="w-full flex justify-between items-center px-10 py-7">
+                  <div className="w-full flex justify-between items-center sm:px-10 sm:py-7 px-5 py-4">
                     <p className="sm:text-lg text-base text-offWhite sm:leading-[130%] leading-[130%] max-w-[150px]">
                       {item.foodName}
                     </p>
