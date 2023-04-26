@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "assets/fonts/stylesheet.css";
+@import "public/fonts/stylesheet.css";
 
 * {
   margin: 0;
