@@ -7,7 +7,7 @@ import Dots from "./Dots";
 type Props = PropsWithChildren & EmblaOptionsType;
 
 const Carousel = ({ children, ...options }: Props) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, );
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
 
   // We need to track the selectedIndex to allow this component to re-render in react.
   // Since emblaRef is a ref, it won't re-render even if there are internal changes to its state.

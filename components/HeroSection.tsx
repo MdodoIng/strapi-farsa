@@ -6,7 +6,6 @@ import Image from "next/image";
 import Carousel from "ui/Carousel";
 
 const HeroSection = ({ data }: any) => {
-  console.log(data)
   return (
     <div className="relative w-full flex items-center justify-center">
       <Carousel loop>
@@ -21,7 +20,7 @@ const HeroSection = ({ data }: any) => {
           ) => {
             return (
               <div
-                className="relative h-[400px] flex-[0_0_100%] flex items-end"
+                className="relative aspect-video flex-[0_0_100%] flex items-end"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(217, 217, 217, 0) 44.74%, #000000 111.28%)",

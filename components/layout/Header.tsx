@@ -1,11 +1,20 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import NavbarOpen from "../NavbarOpen";
+
 import logo from "public/logo white.svg";
 
 const Header = () => {
-  
+  const [isToggle, setIsToggle] = useState<boolean>(false);
   return (
-    <header className="main_padding w-full  fixed top-11 z-50">
+    <header
+      className="main_padding w-full  fixed top-11"
+      style={{
+        zIndex: 9999,
+      }}
+    >
       <div className=" max-w-2xl mx-auto flex items-center justify-between">
         <div>
           <Link href="/">
@@ -18,7 +27,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div>
+        <div onClick={() => setIsToggle(!isToggle)} className="cursor-pointer">
           <svg
             className="h-5 w-auto"
             viewBox="0 0 31 22"
@@ -32,6 +41,7 @@ const Header = () => {
           </svg>
         </div>
       </div>
+      <NavbarOpen isToggle={isToggle} />
     </header>
   );
 };

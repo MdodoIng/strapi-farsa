@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const MainProducts = ({ data }: any) => {
@@ -9,7 +10,8 @@ const MainProducts = ({ data }: any) => {
           item: { picture: any; foodName: string; rate: number },
           idx: React.Key
         ) => (
-          <div
+          <Link
+            href={`/${item.foodName}`}
             key={idx}
             className="flex items-center justify-center w-full border-[2px] border-brown rounded-[8px] overflow-hidden bg-[#F6ECE0] min-h-[200px]"
           >
@@ -27,7 +29,7 @@ const MainProducts = ({ data }: any) => {
               <p>{item.foodName}</p>
               <p className="text-brown">₹ {item.rate}</p>
             </div>
-          </div>
+          </Link>
         )
       )}
     </div>
