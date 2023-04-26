@@ -47,14 +47,14 @@ const HeroSection = ({ data, isSelectedCategory }: any) => {
           )}
         </Carousel>
       ) : (
-        <div className="flex items-center justify-center w-full sm:aspect-[16/6] aspect-[16/5] rounded-[10px] overflow-hidden relative">
+        <div className="flex items-center justify-center w-full sm:aspect-[16/6] aspect-[16/5] rounded-[10px] overflow-hidden relative bg-black bg-opacity-40">
           <Image
             src={data[0].picture}
             alt=""
             width={100}
             height={100}
             loading="lazy"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover -z-10"
           />
           <p className="absolute font-calisga sm:text-4xl text-xl tracking-[0.07em] text-offWhite">
             {isSelectedCategory}
