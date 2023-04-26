@@ -6,6 +6,7 @@ import Image from "next/image";
 import Carousel from "ui/Carousel";
 
 const HeroSection = ({ data }: any) => {
+  console.log(data)
   return (
     <div className="relative w-full flex items-center justify-center">
       <Carousel loop>
@@ -14,7 +15,7 @@ const HeroSection = ({ data }: any) => {
             item: {
               foodName: string;
               rate: number;
-              picture: string;
+              picture: any;
             },
             i: React.Key
           ) => {
@@ -28,7 +29,7 @@ const HeroSection = ({ data }: any) => {
                 key={i}
               >
                 <Image
-                  src={item.picture}
+                  src={item.picture.src}
                   fill
                   alt={`${item.foodName} image`}
                   loading="lazy"
