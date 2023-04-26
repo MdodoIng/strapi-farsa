@@ -2,11 +2,12 @@ import Image from "next/image";
 import React from "react";
 
 const MainProducts = ({ data }: any) => {
+  console.log(data);
   return (
     <div className="mt-10 grid gap-5">
       {data.map(
         (
-          item: { picture: string; foodName: string; rate: number },
+          item: { picture: { src: string }; foodName: string; rate: number },
           idx: React.Key
         ) => (
           <div
@@ -15,7 +16,7 @@ const MainProducts = ({ data }: any) => {
           >
             <div className="w-[30%] shrink-0 h-full overflow-hidden">
               <Image
-                src={item.picture}
+                src={item.picture.src}
                 alt={`${item.foodName} picture`}
                 width={100}
                 height={100}
