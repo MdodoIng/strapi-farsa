@@ -23,9 +23,8 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["components/*"],
-      "@/public/*": ["public/*"],
       "@/styles/*": ["styles/*"],
-      "@/images/*": ["public/images/*"],
+      "@/images/*": ["/images/*"],
       "@/ui/*": ["ui/*"],
     }
   },
