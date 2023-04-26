@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 const MainProducts = ({ data }: any) => {
-  console.log(data);
   return (
     <div className="mt-10 grid gap-5">
       {data.map(

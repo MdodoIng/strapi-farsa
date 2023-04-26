@@ -6,7 +6,6 @@ import Image from "next/image";
 import Carousel from "ui/Carousel";
 
 const HeroSection = ({ data }: any) => {
-  console.log(data);
   return (
     <div className="relative w-full flex items-center justify-center">
       <Carousel loop>
