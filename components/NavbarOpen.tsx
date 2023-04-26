@@ -1,3 +1,4 @@
+import { useStatesContext } from "context/context";
 import { motion } from "framer-motion";
 import { navbarMenuAnim, navbarOpenAnim } from "lib/motion";
 import React from "react";
@@ -13,7 +14,17 @@ const breadCrumbs = [
   "Noodles",
 ];
 
-const NavbarOpen = ({ isToggle }: boolean | any): JSX.Element => {
+const NavbarOpen = ({ isToggle, setIsToggle }: any): JSX.Element => {
+  const { isSelectedCategory, setIsSelectedCategory } = useStatesContext();
+
+  const handleClick = (title: string) => {
+    if (isSelectedCategory === title) return;
+    else {
+      setIsSelectedCategory(title);
+      setIsToggle(false);
+    }
+  };
+
   return (
     <motion.div
       animate={isToggle ? "true" : "false"}
@@ -21,17 +32,21 @@ const NavbarOpen = ({ isToggle }: boolean | any): JSX.Element => {
       variants={navbarOpenAnim}
       className="bg-headTexture fixed inset-0 -z-10 bg-center bg-cover  main_padding"
     >
-      <div className="max-w-2xl mx-auto flex  content-start justify-start flex-wrap w-full gap-5 pt-52">
+      <div className="max-w-2xl mx-auto flex  content-start justify-start flex-wrap w-full gap-6 pt-52">
         {breadCrumbs.map((item, idx) => (
           <motion.div
             animate={isToggle ? "true" : "false"}
             initial={false}
-            variants={navbarMenuAnim("up", "spring", .2 * idx, 0.5)}
+            variants={navbarMenuAnim("up", "spring", 0.2 * idx, 0.5)}
             key={idx}
+            onClick={() => handleClick(item)}
+            className={`px-5 py-3 pb-4 leading-none   text-xl border rounded-[18px] cursor-pointer select-none  ${
+              isSelectedCategory === item
+                ? "border-[#F6ECE099] text-[#F6ECE099]"
+                : " border-offWhite text-offWhite"
+            }`}
           >
-            <button className="px-5 py-3 pb-4 leading-none border-offWhite text-offWhite text-xl border rounded-[18px] cursor-pointer select-none">
-              {item}
-            </button>
+            {item}
           </motion.div>
         ))}
       </div>

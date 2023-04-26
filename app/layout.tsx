@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import Layout from "components/layout/Layout";
 import Image from "next/image";
 import head_texture from "public/textures/head texture.webp";
+import { StateProvider } from "context/context";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -21,18 +22,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" style={rubik.style}>
-      <body
-        className={` bg-pepperTexture bg-contain relative flex items-start justify-center flex-col w-full`}
-      >
-        <Image
-          src={head_texture}
-          alt="texture"
-          fill
-          loading="eager"
-          className="absolute top-0 w-full max-h-[300px] object-cover object-[0_25%] -z-10"
-        />
-        <Layout>{children}</Layout>
-      </body>
+      <StateProvider>
+        <body
+          className={` bg-pepperTexture bg-contain relative flex items-start justify-center flex-col w-full`}
+        >
+          <Image
+            src={head_texture}
+            alt="texture"
+            fill
+            loading="eager"
+            className="absolute top-0 w-full max-h-[300px] object-cover object-[0_25%] -z-10"
+          />
+          <Layout>{children}</Layout>
+        </body>
+      </StateProvider>
     </html>
   );
 }

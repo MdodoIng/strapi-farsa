@@ -19,10 +19,32 @@
 }
 
 .main_padding {
-  @apply px-24;
+  @apply lg:px-24 px-3;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -100px;
+}
+
+.breadCrumbScroll .scrollbar-thumb {
+  background: #301d137c;
+}
+.breadCrumbScroll .scrollbar-track  {
+  background: #301d131c;
+}
+
+.breadCrumbScroll::-webkit-scrollbar-thumb {
+  background-color: #49392a;
+  outline: 0.5px solid #e9c8a7;
+  border-radius: 10px;
+  width: 5px;
+  margin-top: 10px;
+}
+
+.breadCrumbScroll::-webkit-scrollbar {
+  height: 0;
+  width: 20px;
+  border-radius: 100%;
+  outline: none;
 }

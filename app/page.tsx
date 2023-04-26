@@ -5,6 +5,7 @@ import MainProducts from "components/MainProducts";
 import BreadCrumbs from "ui/BreadCrumbs";
 
 import dummi from "public/images/chiken beriyani.webp";
+import { useStatesContext } from "context/context";
 
 const breadCrumbs = [
   "Rice",
@@ -35,15 +36,17 @@ const data = [
 ];
 export default function Home() {
   const [isSelected, setIsSelected] = useState(breadCrumbs[0]);
-  
+  const { isSelectedCategory } = useStatesContext();
+
   return (
-    <main className="main_padding min-h-screen w-full mt-52">
+    <main className="main_padding min-h-screen w-full sm:mt-52 mt-40 mb-20">
       <div className="max-w-2xl mx-auto ">
-        <HeroSection data={data} />
+        <HeroSection data={data} isSelectedCategory={isSelectedCategory} />
         <BreadCrumbs
           data={breadCrumbs}
           isSelected={isSelected}
           setIsSelected={setIsSelected}
+          isSelectedCategory={isSelectedCategory}
         />
         <MainProducts data={data} />
       </div>

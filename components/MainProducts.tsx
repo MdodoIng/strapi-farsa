@@ -13,9 +13,9 @@ const MainProducts = ({ data }: any) => {
           <Link
             href={`/${item.foodName}`}
             key={idx}
-            className="flex items-center justify-center w-full border-[2px] border-brown rounded-[8px] overflow-hidden bg-[#F6ECE0] min-h-[200px]"
+            className="flex items-center justify-center w-full border-[2px] border-brown rounded-[8px] overflow-hidden bg-[#F6ECE0] sm:min-h-[200px] h-full shrink-0"
           >
-            <div className="w-[30%] shrink-0 h-full overflow-hidden">
+            <div className="sm:w-[30%] w-[40%] shrink-0 h-full overflow-hidden">
               <Image
                 src={item.picture.src}
                 alt={`${item.foodName} picture`}
@@ -25,7 +25,7 @@ const MainProducts = ({ data }: any) => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="w-full text-[#301D13] text-lg flex flex-col justify-between h-full py-6 px-10">
+            <div className="w-full text-[#301D13] sm:text-lg text-base leading-[130%] flex flex-col justify-between h-full sm:py-6 sm:px-10 py-[22px] px-[14px] gap-5">
               <p>{item.foodName}</p>
               <p className="text-brown">₹ {item.rate}</p>
             </div>
