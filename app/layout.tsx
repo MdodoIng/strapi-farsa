@@ -1,6 +1,6 @@
 import "styles/globals.css";
 import { Rubik } from "next/font/google";
-import Layout from "@/components/layout/Layout";
+import Layout from "components/layout/Layout";
 import Image from "next/image";
 import head_texture from "public/textures/head texture.webp";
 
