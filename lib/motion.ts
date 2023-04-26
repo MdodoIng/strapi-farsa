@@ -30,6 +30,7 @@ export const navbarMenuAnim = (
     x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
     y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
     opacity: 0,
+    zIndex : -999
   },
   true: {
     x: 0,
@@ -41,5 +42,6 @@ export const navbarMenuAnim = (
       ease: "easeOut",
     },
     opacity: 1,
+    zIndex : 0
   },
 });

@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import dummi from "public/images/chiken beriyani.webp";
 import Image from "next/image";
 
 import head_texture from "public/textures/head texture.webp";
+import Link from "next/link";
 
 function page() {
   return (
@@ -10,9 +12,10 @@ function page() {
       <Image
         src={head_texture}
         alt="texture"
-        fill
-        loading="eager"
-        className="fixed top-0 w-full sm:max-h-[300px] min-[300px]:max-h-[250px] max-h-[200px] object-cover object-[0_25%] -z-10"
+        width={head_texture.width / 2}
+        height={head_texture.height / 2}
+        loading="lazy"
+        className="fixed top-0 left-0 w-full sm:max-h-[300px] min-[300px]:max-h-[250px] max-h-[200px] object-cover object-[0_25%] -z-10"
       />
       <div className="max-w-2xl mx-auto flex flex-col items-start justify-center">
         <div className="sm:aspect-video aspect-[1/.8] overflow-hidden w-full rounded-[10px]">
@@ -41,9 +44,12 @@ function page() {
         </div>
 
         <div className="flex items-center justify-center w-full">
-          <button className="mt-7 px-4 py-3 pb-4 border border-black rounded-[20px] text-brown text-lg flex items-center justify-center max-sm:w-full cursor-pointer">
+          <Link
+            href={"/"}
+            className="mt-7 px-4 py-3 pb-4 border border-black rounded-[20px] text-brown text-lg flex items-center justify-center max-sm:w-full cursor-pointer"
+          >
             Go back to Smootie
-          </button>
+          </Link>
         </div>
       </div>
     </div>

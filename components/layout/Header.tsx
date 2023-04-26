@@ -18,8 +18,10 @@ const Header = () => {
       }}
     >
       <div className=" max-w-2xl mx-auto flex items-center justify-between ">
-        <div className={`${!isToggle && "hidden w-0"} sm:hidden w-[50px] duration-300 ease-in`} />
-        <div className={`${!isToggle && "pl-4"}`}>
+        <div
+          className={`${!isToggle && "hidden"}  w-[50px] duration-300 ease-in`}
+        />
+        <div className={`${!isToggle && " pl-4"}`}>
           <Link href="/">
             <Image
               src={logo}
