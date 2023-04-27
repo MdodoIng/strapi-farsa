@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      pepperTexture: "url('../public/textures/pepper texture.webp')",
+      pepperTexture: "url('../public/textures/pepper texture mob.webp')",
       headTexture: "url('../public/textures/head texture.webp')",
     },
   },

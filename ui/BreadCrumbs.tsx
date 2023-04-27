@@ -12,7 +12,7 @@ const BreadCrumbs = ({
     <div
       className={`${
         isSelectedCategory && "hidden"
-      }   sm:mt-20 mt-8 overflow-x-auto h-16 breadCrumbScroll w-full flex items-center justify-start sm:gap-10 gap-6`}
+      }   sm:mt-14 mt-8 overflow-x-auto h-16 breadCrumbScroll w-full flex items-center justify-start sm:gap-10 gap-6`}
     >
       {data.map((item: string, idx: React.Key) => (
         <p

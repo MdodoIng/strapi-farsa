@@ -32,10 +32,8 @@ const Carousel = ({ children, ...options }: Props) => {
 
   return (
     <>
-      <div className="overflow-hidden w-full rounded-[10px]" ref={emblaRef}>
-        {/* 3. The inner div must have a display:flex property */}
-        {/* 4. We pass the children as-is so that the outside component can style it accordingly */}
-        <div className="flex ">{children}</div>
+      <div className="overflow-hidden w-full z-10 rounded-[10px]" ref={emblaRef}>
+        <div className="flex -z-10">{children}</div>
       </div>
       <Dots itemsLength={length} selectedIndex={selectedIndex} />
     </>

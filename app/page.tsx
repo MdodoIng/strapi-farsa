@@ -49,7 +49,7 @@ export default function Home() {
         width={1000}
         height={300}
         loading="lazy"
-        className={`fixed top-0 w-full left-0  object-cover object-[0_25%] -z-10 ${
+        className={`absolute top-0 w-full left-0  object-cover object-[0_25%] -z-10 ${
           isSelectedCategory ? "max-h-[180px] min-[450px]:max-h-[250px]" : "max-h-[300px]"
         }`}
       />

@@ -15,7 +15,7 @@ function page() {
         width={1000}
         height={300}
         loading="lazy"
-        className="fixed top-0 left-0 w-full sm:max-h-[300px] min-[300px]:max-h-[250px] max-h-[200px] object-cover object-[0_25%] -z-10"
+        className="absolute top-0 left-0 w-full sm:max-h-[300px] min-[300px]:max-h-[250px] max-h-[200px] object-cover object-[0_25%] -z-10"
       />
       <div className="max-w-2xl mx-auto flex flex-col items-start justify-center">
         <div className="sm:aspect-video aspect-[1/.8] overflow-hidden w-full rounded-[10px]">

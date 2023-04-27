@@ -5,7 +5,7 @@ import Carousel from "ui/Carousel";
 
 const HeroSection = ({ data, isSelectedCategory }: any) => {
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center z-10">
       {!isSelectedCategory ? (
         <Carousel loop>
           {data.map(
